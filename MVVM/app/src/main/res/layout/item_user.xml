@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/userImgView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"/>
+    <TextView
+        android:id="@+id/usernameTv"
+        android:layout_weight="1"
+        android:layout_marginStart="16dp"
+        android:textSize="25sp"
+        android:text="Aman Mahajan"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:textColor="@color/design_default_color_primary"
+        android:fontFamily="cursive"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

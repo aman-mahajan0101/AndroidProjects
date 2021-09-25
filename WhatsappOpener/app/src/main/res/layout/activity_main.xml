@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/wallpaper"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/etNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="180dp"
+        android:hint="Enter the Number!!"
+        android:inputType="number"
+        android:backgroundTint="#ece5dd"
+        android:textColor="@color/teal_200"
+        android:textEditSuggestionItemLayout="@color/teal_200" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="24dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#128c7e"
+        android:text="Search"
+        android:textColor="#0f0f0f" />
+
+</LinearLayout>
