@@ -28,10 +28,26 @@ class StateAdapter(val list: List<StatewiseItem>) : BaseAdapter() {
         deceasedtv = view.findViewById(R.id.deceasedTv)
         stateTv = view.findViewById(R.id.stateTv)
 
-        confirmedtv.text = item.confirmed
-        recoveredtv.text=item.recovered
-        activetv.text = item.active
-        deceasedtv.text = item.deaths
+        confirmedtv.text = SpannableDelta(
+            "${item.confirmed}\n↑${item.deltaconfirmed ?: "0"}",
+            "#D32F2F",
+            item.confirmed?.length ?: 0
+        )
+        recoveredtv.text = SpannableDelta(
+            "${item.recovered}\n↑${item.deltarecovered ?: "0"}",
+            "#388E3C",
+            item.recovered?.length ?: 0
+        )
+        activetv.text = SpannableDelta(
+            "${item.active}\n↑${item.deltaactive ?: "0"}",
+            "#1976D2",
+            item.confirmed?.length ?: 0
+        )
+        deceasedtv.text = SpannableDelta(
+            "${item.deaths}\n↑${item.deltadeaths ?: "0"}",
+            "#FBC02D",
+            item.confirmed?.length ?: 0
+        )
         stateTv.text = item.state
 
         return view
